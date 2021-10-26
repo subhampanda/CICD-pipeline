@@ -1,4 +1,4 @@
-resource "aws_security_group" "demo-sg" {
+resource "aws_security_group" "sangam-sg" {
   name        = "sangam-sg"
   description = "allow ssh and http traffic"
 
