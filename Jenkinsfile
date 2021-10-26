@@ -12,7 +12,7 @@ pipeline {
         }
         stage ("terraform init") {
             steps {
-                sh 'git --version'
+                sh 'terraform init'
             }
         }
         stage ("terraform fmt") {
