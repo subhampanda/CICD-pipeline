@@ -1,8 +1,3 @@
-provider "aws" {
-  region = "us-east-1"
-}
-
-# Get latest snapshot from production DB
 data "aws_db_snapshot" "db_snapshot" {
     most_recent = true
     db_instance_identifier = "db-prod"
