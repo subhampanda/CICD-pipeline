@@ -12,8 +12,8 @@ pipeline{
            AWS_ACCOUNT = '947666650043'
            AWS_ENVIRONMENT = "preprod"
            STACK_NAME = "test"
-	   APP_NAME = 'lm-dbrefresh-core-dni'
-	   STATE_BUCKET_PREFIX='lm-dbrefresh-core-dni'
+	   APP_NAME = 'db-prod-core-dni'
+	   STATE_BUCKET_PREFIX='947666650043-bucket'
     }
 	
     stages {
