@@ -5,7 +5,7 @@ data "aws_db_snapshot" "db_snapshot" {
 # Create new staging DB
 resource "aws_db_instance" "db_preuat" {
   instance_class       = "db.t2.micro"
-  identifier           = "db-uat"
+  identifier           = "db-preuat"
   username             = "subham"
   password             = "subham123"
 
