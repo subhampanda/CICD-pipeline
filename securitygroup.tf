@@ -9,6 +9,6 @@ resource "aws_db_instance" "db_preuat" {
   username             = "subham"
   password             = "subham123"
 
-  snapshot_identifier  = "subhampan"
+  snapshot_identifier  = "db-prepod"
   skip_final_snapshot = true
 }
