@@ -9,7 +9,6 @@ resource "aws_db_instance" "db_preuat" {
   username             = "subham"
   password             = "subham123"
 
-  #snapshot_identifier  = "${data.aws_db_snapshot.db_snapshot.id}"
   snapshot_identifier  = "subhampan"
   skip_final_snapshot = true
 }
