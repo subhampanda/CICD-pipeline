@@ -1,25 +1,15 @@
-resource "aws_security_group" "demo-sg" {
-  name        = "demo-sg"
-  description = "allow ssh and http traffic"
+data "aws_db_snapshot" "db_snapshot" {
+    most_recent = true
+    db_instance_identifier = "db-prod"
+}
+# Create new staging DB
+resource "aws_db_instance" "db_uat" {
+  instance_class       = "db.t2.micro"
+  identifier           = "db-uat"
+  username             = "subham"
+  password             = "subham123"
 
-  ingress {
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
+  snapshot_identifier  = "${data.aws_db_snapshot.db_snapshot.id}"
 
-  ingress {
-    from_port   = 80
-    to_port     = 80
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  egress {
-    from_port       = 0
-    to_port         = 0
-    protocol        = "-1"
-    cidr_blocks     = ["0.0.0.0/0"]
-  }
+  skip_final_snapshot = true
 }
