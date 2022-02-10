@@ -3,7 +3,7 @@ data "aws_db_snapshot" "db_snapshot" {
     db_instance_identifier = "db-prepod"
 }
 # Create new staging DB
-resource "aws_db_instance" "db_uat" {
+resource "aws_db_instance" "db_preuat" {
   instance_class       = "db.t2.micro"
   identifier           = "db-uat"
   username             = "subham"
