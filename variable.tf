@@ -7,3 +7,7 @@ variable "secret_key" {
 variable "region" {
   default = "us-east-2"
   }
+variable "db_instance_identifier"{
+    default = "lm-mmx-psdv"
+}
+
